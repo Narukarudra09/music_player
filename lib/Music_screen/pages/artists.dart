@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Tracks extends StatefulWidget {
-  const Tracks({super.key});
+class Artists extends StatefulWidget {
+  const Artists({super.key});
 
   @override
-  State<Tracks> createState() => _TracksState();
+  State<Artists> createState() => _ArtistsState();
 }
 
-class _TracksState extends State<Tracks> {
+class _ArtistsState extends State<Artists> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -23,7 +23,7 @@ class _TracksState extends State<Tracks> {
                   color: Colors.deepPurple,
                   borderRadius: BorderRadius.circular(10)),
             ),
-            title: const Text("Song Name"),
+            title: const Text("Artist Name"),
             titleTextStyle: TextStyle(
                 color: Theme.of(context).brightness == Brightness.light
                     ? Colors.black
@@ -31,16 +31,15 @@ class _TracksState extends State<Tracks> {
                 fontWeight: FontWeight.w500,
                 fontSize: 16,
                 letterSpacing: 1.7),
-            subtitle: const Text("Artist Name"),
+            subtitle: const Text("no of album"),
             subtitleTextStyle: TextStyle(
-              color: Colors.grey[600],
               fontSize: 12,
+              color: Colors.grey[600],
             ),
-            trailing: const Icon(Icons.more_vert),
           );
         },
         separatorBuilder: (BuildContext context, int index) {
-          return Divider(
+          return const Divider(
             indent: 80,
             endIndent: 20,
           );

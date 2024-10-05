@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_player/Music_screen/pages/artists.dart';
 import 'package:music_player/Music_screen/pages/tracks.dart';
 
 class MusicScreen extends StatefulWidget {
@@ -62,7 +63,7 @@ class _MusicScreenState extends State<MusicScreen> {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: const TabBarView(children: [
-            Text("Songs"),
+            Artists(),
             Text("Playlist"),
             Tracks(),
             Text("Songs"),
