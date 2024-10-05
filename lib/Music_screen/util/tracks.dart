@@ -1,0 +1,46 @@
+import 'package:flutter/material.dart';
+
+class Tracks extends StatefulWidget {
+  const Tracks({super.key});
+
+  @override
+  State<Tracks> createState() => _TracksState();
+}
+
+class _TracksState extends State<Tracks> {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 12.0),
+      child: ListView.separated(
+        itemCount: 15,
+        itemBuilder: (context, index) {
+          return ListTile(
+            leading: Container(
+              width: 50,
+              height: 50,
+              decoration: BoxDecoration(
+                  color: Colors.deepPurple,
+                  borderRadius: BorderRadius.circular(10)),
+            ),
+            title: Text("Song Name"),
+            titleTextStyle: TextStyle(
+                color: Theme.of(context).brightness == Brightness.light
+                    ? Colors.black
+                    : Colors.white,
+                fontWeight: FontWeight.w500,
+                fontSize: 16,
+                letterSpacing: 1.7),
+            subtitle: Text("Artist Name"),
+            trailing: Icon(Icons.more_vert),
+          );
+        },
+        separatorBuilder: (BuildContext context, int index) {
+          return Divider(
+            indent: 65,
+          );
+        },
+      ),
+    );
+  }
+}
