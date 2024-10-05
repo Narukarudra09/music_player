@@ -23,7 +23,7 @@ class _TracksState extends State<Tracks> {
                   color: Colors.deepPurple,
                   borderRadius: BorderRadius.circular(10)),
             ),
-            title: Text("Song Name"),
+            title: const Text("Song Name"),
             titleTextStyle: TextStyle(
                 color: Theme.of(context).brightness == Brightness.light
                     ? Colors.black
@@ -31,13 +31,14 @@ class _TracksState extends State<Tracks> {
                 fontWeight: FontWeight.w500,
                 fontSize: 16,
                 letterSpacing: 1.7),
-            subtitle: Text("Artist Name"),
-            trailing: Icon(Icons.more_vert),
+            subtitle: const Text("Artist Name"),
+            trailing: const Icon(Icons.more_vert),
           );
         },
         separatorBuilder: (BuildContext context, int index) {
           return Divider(
-            indent: 65,
+            indent: 80,
+            endIndent: 20,
           );
         },
       ),
