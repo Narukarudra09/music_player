@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:music_player/Music_screen/pages/albums.dart';
 import 'package:music_player/Music_screen/pages/artists.dart';
+import 'package:music_player/Music_screen/pages/playlist.dart';
 import 'package:music_player/Music_screen/pages/tracks.dart';
 
 class MusicScreen extends StatefulWidget {
@@ -29,12 +31,12 @@ class _MusicScreenState extends State<MusicScreen> {
                     : Colors.transparent;
               },
             ),
-            labelStyle: TextStyle(fontSize: 16),
+            labelStyle: const TextStyle(fontSize: 16),
             labelColor: Theme.of(context).brightness == Brightness.light
                 ? Colors.black
                 : Colors.white,
             unselectedLabelColor: Colors.grey[700],
-            unselectedLabelStyle: TextStyle(fontSize: 12),
+            unselectedLabelStyle: const TextStyle(fontSize: 12),
             dividerHeight: 0,
             indicator: const BoxDecoration(),
             tabs: const [
@@ -64,9 +66,9 @@ class _MusicScreenState extends State<MusicScreen> {
           height: MediaQuery.of(context).size.height,
           child: const TabBarView(children: [
             Artists(),
-            Text("Playlist"),
+            Playlist(),
             Tracks(),
-            Text("Songs"),
+            Albums(),
           ]),
         ),
       ),

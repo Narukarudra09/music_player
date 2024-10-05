@@ -20,8 +20,16 @@ class _ArtistsState extends State<Artists> {
               width: 50,
               height: 50,
               decoration: BoxDecoration(
-                  color: Colors.deepPurple,
+                  color: Colors.grey[100],
                   borderRadius: BorderRadius.circular(10)),
+              child: Center(
+                child: Icon(
+                  Icons.music_note_sharp,
+                  color: Theme.of(context).brightness == Brightness.light
+                      ? Colors.grey[500]
+                      : Colors.grey[500],
+                ),
+              ),
             ),
             title: const Text("Artist Name"),
             titleTextStyle: TextStyle(
