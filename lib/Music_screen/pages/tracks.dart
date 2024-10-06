@@ -48,7 +48,7 @@ class _TracksState extends State<Tracks> {
           );
         },
         separatorBuilder: (BuildContext context, int index) {
-          return Divider(
+          return const Divider(
             indent: 80,
             endIndent: 20,
           );
